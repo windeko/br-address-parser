@@ -1,0 +1,166 @@
+[
+    {
+        "only": true,
+        "address": "RUA DA  GROENLANDIA-255 APTO 404 - SION - BELO HORIZONTE - MG",
+        "expected": {
+            "address": "RUA DA GROENLANDIA",
+            "number": "255",
+            "complement": "APTO 404",
+            "neighborhood": "SION",
+            "city": "BELO HORIZONTE",
+            "state": "MG"
+        }
+    },
+    {
+        "only": true,
+        "address": "AV ROMULO MAIORANA 1695-APTO 1903 - MARCO - BELEM - PA",
+        "expected": {
+            "address": "AV ROMULO MAIORANA",
+            "number": "1695",
+            "complement": "APTO 1903",
+            "neighborhood": "MARCO",
+            "city": "BELEM",
+            "state": "PA"
+        }
+    },
+    {
+        "address": "R MON DANTAS-100 AP 1023 B - JACARECANGA - FORTALEZA - CE",
+        "expected": {
+            "address": "R MON DANTAS",
+            "number": "100",
+            "complement": "AP 1023 B",
+            "neighborhood": "JACARECANGA",
+            "city": "FORTALEZA",
+            "state": "CE"
+        }
+    },
+    {
+        "address": "AV RENE LACLETTE-APTO 807 BL 5 (ED LIRIO) - RECREIO DOS BANDEIRANTES - RIO DE JANEIRO - RJ",
+        "expected": null
+    },
+    {
+        "address": "RUA A, 40-LOT JARDIM COSTA MAR - ZONA DE EXPANSAO (ARUANA) - ARACAJU - SE",
+        "expected": {
+            "address": "RUA A",
+            "number": "40",
+            "complement": "LOT JARDIM COSTA MAR",
+            "neighborhood": "ZONA DE EXPANSAO (ARUANA)",
+            "city": "ARACAJU",
+            "state": "SE"
+        }
+    },
+    {
+        "address": "RUA TIBAU DO NORTE-25 - NOVA PARNAMIRIM - PARNAMIRIM - RN",
+        "expected": {
+            "address": "RUA TIBAU DO NORTE",
+            "number": "25",
+            "complement": "",
+            "neighborhood": "NOVA PARNAMIRIM",
+            "city": "PARNAMIRIM",
+            "state": "RN"
+        }
+    },
+    {
+        "address": "RUA 08H-RESIDENCIAL MONTE REAL, AP 201 - PREFEITO JOSE WALTER - FORTALEZA - CE",
+        "expected": null
+    },
+    {
+        "address": "AV JOSE ALCINO HANDAM DE REZENDE 1318-CS - CALAIS - BOM DESPACHO - MG",
+        "expected": {
+            "address": "AV JOSE ALCINO HANDAM DE REZENDE",
+            "number": "1318",
+            "complement": "CS",
+            "neighborhood": "CALAIS",
+            "city": "BOM DESPACHO",
+            "state": "MG"
+        }
+    },
+    {
+        "address": "SITIO BOA VENTURA-S/N - ZONA RURAL - POCAO - PE",
+        "expected": {
+            "address": "SITIO BOA VENTURA",
+            "number": "S/N",
+            "complement": "",
+            "neighborhood": "ZONA RURAL",
+            "city": "POCAO",
+            "state": "PE"
+        }
+    },
+    {
+        "address": "RUA GIUSEPPE TARTINI-SN BLOCO A16 APTO 27 - JARDIM SAO BERNARDO - SAO PAULO - SP",
+        "expected": {
+            "address": "RUA GIUSEPPE TARTINI",
+            "number": "SN",
+            "complement": "BLOCO A16 APTO 27",
+            "neighborhood": "JARDIM SAO BERNARDO",
+            "city": "SAO PAULO",
+            "state": "SP"
+        }
+    },
+    {
+        "address": "RUA 09, 639-CASA - CENTRO - SANTA FE DO SUL - SP",
+        "expected": {
+            "address": "RUA 09",
+            "number": "639",
+            "complement": "CASA",
+            "neighborhood": "CENTRO",
+            "city": "SANTA FE DO SUL",
+            "state": "SP"
+        }
+    },
+    {
+        "address": "RUA RAIMUNDO DIOGENES DA SILVEIRA - N585 CASA - BAIRRO GAVIAO - SAO RAIMUNDO NONATO - PI",
+        "expected": {
+            "address": "RUA RAIMUNDO DIOGENES DA SILVEIRA",
+            "number": "585",
+            "complement": "CASA",
+            "neighborhood": "BAIRRO GAVIAO",
+            "city": "SAO RAIMUNDO NONATO",
+            "state": "PI"
+        }
+    },
+    {
+        "address": "BR 230-S/N - ZONA RURAL - APUI - AM",
+        "expected": {
+            "address": "BR 230",
+            "number": "S/N",
+            "complement": "",
+            "neighborhood": "ZONA RURAL",
+            "city": "APUI",
+            "state": "AM"
+        }
+    },
+    {
+        "address": "QNM, 34 CONJUNTO A-LOTE 15 AP 01 - TAGUATINGA NORTE (TAGUATINGA) - BRASILIA - DF",
+        "expected": {
+            "address": "QNM, 34 CONJUNTO A",
+            "number": "",
+            "complement": "LOTE 15 AP 01",
+            "neighborhood": "TAGUATINGA NORTE (TAGUATINGA)",
+            "city": "BRASILIA",
+            "state": "DF"
+        }
+    },
+    {
+        "address": "RUA DEZ, CASA 18-QUADRA 02 - PLANALTO VINHAIS II - SAO LUIS - MA",
+        "expected": {
+            "address": "RUA DEZ",
+            "number": "18",
+            "complement": "QUADRA 02",
+            "neighborhood": "PLANALTO VINHAIS II",
+            "city": "SAO LUIS",
+            "state": "MA"
+        }
+    },
+    {
+        "address": "AV DAS AMERICAS 1722 CASA 103-COND GREEN CLUB I - PARQUE DAS NACOES - PARNAMIRIM - RN",
+        "expected": {
+            "address": "AV DAS AMERICAS",
+            "number": "1722",
+            "complement": "CASA 103 - COND GREEN CLUB I",
+            "neighborhood": "PARQUE DAS NACOES",
+            "city": "PARNAMIRIM",
+            "state": "RN"
+        }
+    }
+]
