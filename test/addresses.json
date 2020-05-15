@@ -307,5 +307,16 @@
             "city": "RIO DE JANEIRO",
             "state": "RJ"
         }
+    },
+    {
+        "address": "RUA  SIGEFREDO PINHEIRO-545 / APTO 1301 - FATIMA - FORTALEZA - CE",
+        "expected": {
+            "address": "RUA SIGEFREDO PINHEIRO",
+            "number": "545",
+            "complement": "APTO 1301",
+            "neighborhood": "FATIMA",
+            "city": "FORTALEZA",
+            "state": "CE"
+        }
     }
 ]

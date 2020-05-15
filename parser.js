@@ -49,9 +49,9 @@ const parse = (completeAddress) => {
         // BR-999 - 10 - NEIGHBORHOOD - CITY - ST
         /(?<address>^(\w{2})[\s-]\d+)\s[-,]\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
         // ADDRESS - N99 COMPLEMENT - NEIGHBORHOOD - CITY - ST
-        /(?<address>.*(?<!\s))(\s[-,]\s|\s?,\s?)((((NR?|CASA|NUMERO)\s?)(?<number>\d+|S\/?N)))(\s-\s|\s)(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        /(?<address>.*(?<!\s))(\s[-,]\s|\s?,\s?)((((NR?|CASA|NUMERO)\s?)(?<number>\d+|S\/?N)))(\s[-/]\s|\s)(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
         // ADDRESS - 99 - COMPLEMENT - NEIGHBORHOOD - CITY - ST
-        /(?<address>.*(?<!\s))(\s[-,]\s|\s?,\s?)(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))(\s-\s|\s)(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        /(?<address>.*(?<!\s))(\s[-,]\s|\s?,\s?)(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))(\s[-/]\s|\s)(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
         // ADDRESS - 99/COMPLEMENT - NEIGHBORHOOD - CITY - ST
         /(?<address>.*(?<!\s))(\s[-,]\s|\s?,\s?)(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s?\/\s?(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
         // ADDRESS 99 COMPLEMENT - NEIGHBORHOOD - CITY - ST
