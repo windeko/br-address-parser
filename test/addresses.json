@@ -2,7 +2,7 @@
     {
         "address": "RUA DA  GROENLANDIA-255 APTO 404 - SION - BELO HORIZONTE - MG",
         "expected": {
-            "address": "RUA DA GROENLANDIA",
+            "street": "RUA DA GROENLANDIA",
             "number": "255",
             "complement": "APTO 404",
             "neighborhood": "SION",
@@ -13,7 +13,7 @@
     {
         "address": "AV ROMULO MAIORANA 1695-APTO 1903 - MARCO - BELEM - PA",
         "expected": {
-            "address": "AV ROMULO MAIORANA",
+            "street": "AV ROMULO MAIORANA",
             "number": "1695",
             "complement": "APTO 1903",
             "neighborhood": "MARCO",
@@ -24,7 +24,7 @@
     {
         "address": "R MON DANTAS-100 AP 1023 B - JACARECANGA - FORTALEZA - CE",
         "expected": {
-            "address": "R MON DANTAS",
+            "street": "R MON DANTAS",
             "number": "100",
             "complement": "AP 1023 B",
             "neighborhood": "JACARECANGA",
@@ -39,7 +39,7 @@
     {
         "address": "RUA A, 40-LOT JARDIM COSTA MAR - ZONA DE EXPANSAO (ARUANA) - ARACAJU - SE",
         "expected": {
-            "address": "RUA A",
+            "street": "RUA A",
             "number": "40",
             "complement": "LOT JARDIM COSTA MAR",
             "neighborhood": "ZONA DE EXPANSAO (ARUANA)",
@@ -50,7 +50,7 @@
     {
         "address": "RUA TIBAU DO NORTE-25 - NOVA PARNAMIRIM - PARNAMIRIM - RN",
         "expected": {
-            "address": "RUA TIBAU DO NORTE",
+            "street": "RUA TIBAU DO NORTE",
             "number": "25",
             "complement": "",
             "neighborhood": "NOVA PARNAMIRIM",
@@ -65,7 +65,7 @@
     {
         "address": "AV JOSE ALCINO HANDAM DE REZENDE 1318-CS - CALAIS - BOM DESPACHO - MG",
         "expected": {
-            "address": "AV JOSE ALCINO HANDAM DE REZENDE",
+            "street": "AV JOSE ALCINO HANDAM DE REZENDE",
             "number": "1318",
             "complement": "CS",
             "neighborhood": "CALAIS",
@@ -76,7 +76,7 @@
     {
         "address": "SITIO BOA VENTURA-S/N - ZONA RURAL - POCAO - PE",
         "expected": {
-            "address": "SITIO BOA VENTURA",
+            "street": "SITIO BOA VENTURA",
             "number": "S/N",
             "complement": "",
             "neighborhood": "ZONA RURAL",
@@ -87,7 +87,7 @@
     {
         "address": "RUA GIUSEPPE TARTINI-SN BLOCO A16 APTO 27 - JARDIM SAO BERNARDO - SAO PAULO - SP",
         "expected": {
-            "address": "RUA GIUSEPPE TARTINI",
+            "street": "RUA GIUSEPPE TARTINI",
             "number": "SN",
             "complement": "BLOCO A 16 APTO 27",
             "neighborhood": "JARDIM SAO BERNARDO",
@@ -98,7 +98,7 @@
     {
         "address": "RUA 09, 639-CASA - CENTRO - SANTA FE DO SUL - SP",
         "expected": {
-            "address": "RUA 09",
+            "street": "RUA 09",
             "number": "639",
             "complement": "CASA",
             "neighborhood": "CENTRO",
@@ -109,7 +109,7 @@
     {
         "address": "RUA RAIMUNDO DIOGENES DA SILVEIRA - N585 CASA - BAIRRO GAVIAO - SAO RAIMUNDO NONATO - PI",
         "expected": {
-            "address": "RUA RAIMUNDO DIOGENES DA SILVEIRA",
+            "street": "RUA RAIMUNDO DIOGENES DA SILVEIRA",
             "number": "585",
             "complement": "CASA",
             "neighborhood": "BAIRRO GAVIAO",
@@ -120,7 +120,7 @@
     {
         "address": "BR 230-S/N - ZONA RURAL - APUI - AM",
         "expected": {
-            "address": "BR 230",
+            "street": "BR 230",
             "number": "S/N",
             "complement": "",
             "neighborhood": "ZONA RURAL",
@@ -131,7 +131,7 @@
     {
         "address": "QNM, 34 CONJUNTO A-LOTE 15 AP 01 - TAGUATINGA NORTE (TAGUATINGA) - BRASILIA - DF",
         "expected": {
-            "address": "QNM, 34 CONJUNTO A",
+            "street": "QNM, 34 CONJUNTO A",
             "number": "",
             "complement": "LOTE 15 AP 01",
             "neighborhood": "TAGUATINGA NORTE (TAGUATINGA)",
@@ -142,7 +142,7 @@
     {
         "address": "RUA DEZ, CASA 18-QUADRA 02 - PLANALTO VINHAIS II - SAO LUIS - MA",
         "expected": {
-            "address": "RUA DEZ",
+            "street": "RUA DEZ",
             "number": "18",
             "complement": "QUADRA 02",
             "neighborhood": "PLANALTO VINHAIS II",
@@ -153,7 +153,7 @@
     {
         "address": "AV DAS AMERICAS 1722 CASA 103-COND GREEN CLUB I - PARQUE DAS NACOES - PARNAMIRIM - RN",
         "expected": {
-            "address": "AV DAS AMERICAS",
+            "street": "AV DAS AMERICAS",
             "number": "1722",
             "complement": "CASA 103 - COND GREEN CLUB I",
             "neighborhood": "PARQUE DAS NACOES",
@@ -164,7 +164,7 @@
     {
         "address": "SQNW 109 BLOCO D-AP 208 - SETOR NOROESTE - BRASILIA - DF",
         "expected": {
-            "address": "SQNW 109 BLOCO D",
+            "street": "SQNW 109 BLOCO D",
             "number": "",
             "complement": "AP 208",
             "neighborhood": "SETOR NOROESTE",
@@ -175,7 +175,7 @@
     {
         "address": "R ARTUR DA COSTA E SILVA-MAR. 538 - CORAL - LAGES - SC",
         "expected": {
-            "address": "R ARTUR DA COSTA E SILVA - MAR",
+            "street": "R ARTUR DA COSTA E SILVA - MAR",
             "number": "538",
             "complement": "",
             "neighborhood": "CORAL",
@@ -190,7 +190,7 @@
     {
         "address": "RUA  OLAVO BILAC-345/405 - NOSSA SENHORA DE FATIMA - SANTA MARIA - RS",
         "expected": {
-            "address": "RUA OLAVO BILAC",
+            "street": "RUA OLAVO BILAC",
             "number": "345",
             "complement": "405",
             "neighborhood": "NOSSA SENHORA DE FATIMA",
@@ -201,7 +201,7 @@
     {
         "address": "R MARIA CLARA TAVARES 65-AP 901 BLOCO 01 - CASTELO - BELO HORIZONTE - MG",
         "expected": {
-            "address": "R MARIA CLARA TAVARES",
+            "street": "R MARIA CLARA TAVARES",
             "number": "65",
             "complement": "AP 901 BLOCO 01",
             "neighborhood": "CASTELO",
@@ -212,7 +212,7 @@
     {
         "address": "R. TAQUARI 284 P-CASA 00001 - CENTRO - ESTEIO - RS",
         "expected": {
-            "address": "R TAQUARI",
+            "street": "R TAQUARI",
             "number": "284",
             "complement": "P - CASA 00001",
             "neighborhood": "CENTRO",
@@ -223,7 +223,7 @@
     {
         "address": "SITIO FAZENDA VELHA - RURAL - FAZENDA VELHA - ESTIVA - MG",
         "expected": {
-            "address": "SITIO FAZENDA VELHA",
+            "street": "SITIO FAZENDA VELHA",
             "number": "",
             "complement": "RURAL",
             "neighborhood": "FAZENDA VELHA",
@@ -234,7 +234,7 @@
     {
         "address": "SITIO MATO SECO- - FAZENDA GRANDE - POUSO ALEGRE - MG ",
         "expected": {
-            "address": "SITIO MATO SECO",
+            "street": "SITIO MATO SECO",
             "number": "",
             "complement": "",
             "neighborhood": "FAZENDA GRANDE",
@@ -245,7 +245,7 @@
     {
         "address": "R  VIA FIRENZE-NUMERO 88 - JARDIM VILA PARADISO - INDAIATUBA - SP",
         "expected": {
-            "address": "R VIA FIRENZE",
+            "street": "R VIA FIRENZE",
             "number": "88",
             "complement": "",
             "neighborhood": "JARDIM VILA PARADISO",
@@ -256,7 +256,7 @@
     {
         "address": "R ESPIRITO SANTO-N49 - CENTRO - SUMARE - SP",
         "expected": {
-            "address": "R ESPIRITO SANTO",
+            "street": "R ESPIRITO SANTO",
             "number": "49",
             "complement": "",
             "neighborhood": "CENTRO",
@@ -267,7 +267,7 @@
     {
         "address": "AV 11 MARCO-129 - CENTRO - GOVERNADOR EUGENIO BARROS - MA",
         "expected": {
-            "address": "AV 11 MARCO",
+            "street": "AV 11 MARCO",
             "number": "129",
             "complement": "",
             "neighborhood": "CENTRO",
@@ -278,7 +278,7 @@
     {
         "address": "R 2 - QD AV 3 LT A CASA A - SETOR DONA GERCINA - RIO VERDE - GO",
         "expected": {
-            "address": "R 2",
+            "street": "R 2",
             "number": "",
             "complement": "QD AV 3 LT A CASA A",
             "neighborhood": "SETOR DONA GERCINA",
@@ -289,7 +289,7 @@
     {
         "address": "RUA JORNALISTA ORLANDO GARCIA 158 ED GAIVOTA-AP 904 - DORON - SALVADOR - BA",
         "expected": {
-            "address": "RUA JORNALISTA ORLANDO GARCIA",
+            "street": "RUA JORNALISTA ORLANDO GARCIA",
             "number": "158",
             "complement": "ED GAIVOTA - AP 904",
             "neighborhood": "DORON",
@@ -300,7 +300,7 @@
     {
         "address": "R SILVIO ROMERO-8-AP 504 - SANTA TERESA - RIO DE JANEIRO - RJ",
         "expected": {
-            "address": "R SILVIO ROMERO",
+            "street": "R SILVIO ROMERO",
             "number": "8",
             "complement":"AP 504",
             "neighborhood": "SANTA TERESA",
@@ -311,7 +311,7 @@
     {
         "address": "RUA  SIGEFREDO PINHEIRO-545 / APTO 1301 - FATIMA - FORTALEZA - CE",
         "expected": {
-            "address": "RUA SIGEFREDO PINHEIRO",
+            "street": "RUA SIGEFREDO PINHEIRO",
             "number": "545",
             "complement": "APTO 1301",
             "neighborhood": "FATIMA",

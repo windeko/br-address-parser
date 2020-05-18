@@ -1,5 +1,5 @@
 const blacklist = ({
-    address,
+    street,
     number,
     complement,
     neighborhood,
@@ -9,10 +9,10 @@ const blacklist = ({
     if (/df/i.test(state)) {
         return false;
     }
-    if (/^(RUA|R)$/i.test(address)) {
+    if (/^(RUA|R)$/i.test(street)) {
         return true;
     }
-    return /(apto|bloco|apartamento|casa|ap|bl\s\d+)\b/gi.test(address);
+    return /(apto|bloco|apartamento|casa|ap|bl\s\d+)\b/gi.test(street);
 };
 
 const sanitizeAddress = (completeAddress) => {
@@ -33,7 +33,7 @@ const sanitizeAddress = (completeAddress) => {
 const formatAddress = (parsedAddress) => {
     return {
         ...parsedAddress,
-        address: parsedAddress.address
+        street: parsedAddress.street
             .replace(/\s,\s/gi, ', ')
     }
 }
@@ -42,34 +42,34 @@ const parse = (completeAddress) => {
     const sanitizedAddress = sanitizeAddress(completeAddress);
     console.log(sanitizedAddress);
     const patterns = [
-        // ADDRESS - COMPLEMENT - NEIGHBORHOOD - CITY - DF
-        /(?<address>.*)\s[-,]\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>DF)/i,
-        // ADDRESS - COMPLEMENT - NEIGHBORHOOD - CITY - GO
-        /(?<address>.*(?<!\s))\s-\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>GO)/i,
+        // STREET - COMPLEMENT - NEIGHBORHOOD - CITY - DF
+        /(?<street>.*)\s[-,]\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>DF)/i,
+        // STREET - COMPLEMENT - NEIGHBORHOOD - CITY - GO
+        /(?<street>.*(?<!\s))\s-\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>GO)/i,
         // BR-999 - 10 - NEIGHBORHOOD - CITY - ST
-        /(?<address>^(\w{2})[\s-]\d+)\s[-,]\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
-        // ADDRESS - N99 COMPLEMENT - NEIGHBORHOOD - CITY - ST
-        /(?<address>.*(?<!\s))(\s[-,]\s|\s?,\s?)((((NR?|CASA|NUMERO)\s?)(?<number>\d+|S\/?N)))(\s[-/]\s|\s)(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
-        // ADDRESS - 99 - COMPLEMENT - NEIGHBORHOOD - CITY - ST
-        /(?<address>.*(?<!\s))(\s[-,]\s|\s?,\s?)(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))(\s[-/]\s|\s)(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
-        // ADDRESS - 99/COMPLEMENT - NEIGHBORHOOD - CITY - ST
-        /(?<address>.*(?<!\s))(\s[-,]\s|\s?,\s?)(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s?\/\s?(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
-        // ADDRESS 99 COMPLEMENT - NEIGHBORHOOD - CITY - ST
-        /(?<address>.*(?<!\s))\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s(-\s)?(?<complement>((CASA|APTO|AP)\b\s).*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
-        // ADDRESS - 99 X - COMPLEMENT - NEIGHBORHOOD - CITY - ST
-        /(?<address>.*(?<!\s))\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s(?<complement>\w\s-.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
-        // ADDRESS - 99 - NEIGHBORHOOD - CITY - ST
-        /(?<address>.*(?<!\s))\s[-,]\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
-        // ADDRESS 99 - COMPLEMENT - NEIGHBORHOOD - CITY - ST
-        /(?<address>.*(?<!\s))\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s-\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
-        // ADDRESS 00 COMPLEMENT- COMPLEMENT2 99 - NEIGHBORHOOD - CITY - ST
-        /(?<address>.*(?<!\s))\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s(?<complement>.*-.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
-        // ADDRESS - ADDRESS2 99 - NEIGHBORHOOD - CITY - ST
-        /(?<address>.*(?<!\s))\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        /(?<street>^(\w{2})[\s-]\d+)\s[-,]\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        // STREET - N99 COMPLEMENT - NEIGHBORHOOD - CITY - ST
+        /(?<street>.*(?<!\s))(\s[-,]\s|\s?,\s?)((((NR?|CASA|NUMERO)\s?)(?<number>\d+|S\/?N)))(\s[-/]\s|\s)(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        // STREET - 99 - COMPLEMENT - NEIGHBORHOOD - CITY - ST
+        /(?<street>.*(?<!\s))(\s[-,]\s|\s?,\s?)(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))(\s[-/]\s|\s)(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        // STREET - 99/COMPLEMENT - NEIGHBORHOOD - CITY - ST
+        /(?<street>.*(?<!\s))(\s[-,]\s|\s?,\s?)(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s?\/\s?(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        // STREET 99 COMPLEMENT - NEIGHBORHOOD - CITY - ST
+        /(?<street>.*(?<!\s))\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s(-\s)?(?<complement>((CASA|APTO|AP)\b\s).*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        // STREET - 99 X - COMPLEMENT - NEIGHBORHOOD - CITY - ST
+        /(?<street>.*(?<!\s))\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s(?<complement>\w\s-.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        // STREET - 99 - NEIGHBORHOOD - CITY - ST
+        /(?<street>.*(?<!\s))\s[-,]\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        // STREET 99 - COMPLEMENT - NEIGHBORHOOD - CITY - ST
+        /(?<street>.*(?<!\s))\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s-\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        // STREET 00 COMPLEMENT- COMPLEMENT2 99 - NEIGHBORHOOD - CITY - ST
+        /(?<street>.*(?<!\s))\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s(?<complement>.*-.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        // STREET - STREET2 99 - NEIGHBORHOOD - CITY - ST
+        /(?<street>.*(?<!\s))\s(((NR?|CASA|NUMERO)\s?)?(?<number>(\d+|S\/?N)))\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
         // RURAL WITH COMPLEMENT
-        /(?<address>^(SITIO|FAZENDA|ESTRADA).*)\s[-,]\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
+        /(?<street>^(SITIO|FAZENDA|ESTRADA).*)\s[-,]\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
         // RURAL WITHOUT COMPLEMENT
-        /(?<address>^(SITIO|FAZENDA|ESTRADA).*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i
+        /(?<street>^(SITIO|FAZENDA|ESTRADA).*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i
     ];
     const pattern = patterns.find((p, index) => {
         const pat = p.test(sanitizedAddress);
@@ -89,7 +89,7 @@ const parse = (completeAddress) => {
             return null;
         }
         return formatAddress({
-            address: result.groups.address,
+            street: result.groups.street,
             number: (result.groups.number === undefined) ? '' : result.groups.number,
             complement: (result.groups.complement === undefined) ? '' : result.groups.complement,
             neighborhood: result.groups.neighborhood,
