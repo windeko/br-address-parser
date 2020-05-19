@@ -1,13 +1,16 @@
 {
   "name": "br-address-parser",
   "version": "1.0.0",
-  "description": "A parser for brazilian addresses",
+  "description": "A simple parser for brazilian addresses",
   "main": "index.js",
   "scripts": {
     "test": "_mocha ./test -u tdd"
   },
-  "author": "Rafael Schettino <rafael_tecnologia@outlook.com>",
+  "author": "Rafael Schettino <rafael.schettino@minutrade.com>",
   "license": "ISC",
+  "engines": {
+    "node": ">=6.4.0"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "data-driven": "^1.4.0",
