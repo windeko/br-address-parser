@@ -26,3 +26,7 @@ The above example transforms the string `"Av. Brasil, 1245 - Bloco 2 Ap 203 - Ce
     "state": "MG"
 }
 ```
+
+## License
+
+This project is licensed under the terms of the [MIT license](LICENSE).
