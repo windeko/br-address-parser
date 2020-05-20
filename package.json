@@ -19,5 +19,25 @@
     "chai": "^4.2.0",
     "data-driven": "^1.4.0",
     "mocha": "^7.1.2"
-  }
+  },
+  "keywords": [
+    "correios",
+    "endereço brasileiro",
+    "quebrar endereço",
+    "address split",
+    "separar endereço",
+    "endereço",
+    "address",
+    "correios",
+    "logradouro",
+    "bairro",
+    "cidade",
+    "estado",
+    "cep",
+    "zipcode",
+    "street",
+    "neighborhood",
+    "city",
+    "state"
+  ]
 }
