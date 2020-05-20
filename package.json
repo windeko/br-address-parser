@@ -1,10 +1,14 @@
 {
-  "name": "br-address-parser",
+  "name": "@minutrade/br-address-parser",
   "version": "1.0.0",
   "description": "A simple parser for brazilian addresses",
   "main": "index.js",
   "scripts": {
     "test": "_mocha ./test -u tdd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Minutrade/br-address-parser.git"
   },
   "author": "Rafael Schettino <rafael.schettino@minutrade.com>",
   "license": "MIT",
