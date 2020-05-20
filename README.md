@@ -5,13 +5,14 @@ This module is a simple parser for Brazilian addresses. This receives a complete
 ## How to install
 
 ```
-npm install br-address-parser --save
+npm @minutrade/install br-address-parser --save
 ```
 
 ## How to use
 
 ```javascript
 const brAddressParser = require('@minutrade/br-address-parser');
+
 const completeAddress = 'Av. Brasil, 1245 - Bloco 2 Ap 203 - Centro - Belo Horizonte - MG';
 const parsedAddress = brAddressParser.parse(completeAddress);
 ```
@@ -25,6 +26,12 @@ The above example transforms the string `"Av. Brasil, 1245 - Bloco 2 Ap 203 - Ce
     "city": "Belo Horizonte",
     "state": "MG"
 }
+```
+
+## How to Test
+
+```
+npm test
 ```
 
 ## License
