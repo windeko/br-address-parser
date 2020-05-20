@@ -1,6 +1,6 @@
 {
   "name": "@minutrade/br-address-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple parser for brazilian addresses",
   "main": "index.js",
   "scripts": {
