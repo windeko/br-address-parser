@@ -1,6 +1,6 @@
 # br-address-parser
 
-This module is a simple parser for brazilian addresses. This receives a complete address string and split it in 'street', 'number', 'complement', 'neighborhood', 'city' and 'state'.
+This module is a simple parser for Brazilian addresses. This receives a complete address string and split it in 'street', 'number', 'complement', 'neighborhood', 'city' and 'state'.
 
 ## How to install
 
@@ -15,7 +15,7 @@ const brAddressParser = require('br-address-parser');
 const completeAddress = 'Av. Brasil, 1245 - Bloco 2 Ap 203 - Centro - Belo Horizonte - MG';
 const parsedAddress = brAddressParser.parse(completeAddress);
 ```
-The above example transforms the string `"Av. Brasil, 1245 - Bloco 2 Ap 203 - Centro - Belo Horizonte - MG"` the following object: 
+The above example transforms the string `"Av. Brasil, 1245 - Bloco 2 Ap 203 - Centro - Belo Horizonte - MG"` into the following object: 
 ```json
 {
     "street": "Av. Brasil",
