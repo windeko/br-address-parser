@@ -11,7 +11,7 @@ npm install br-address-parser --save
 ## How to use
 
 ```javascript
-const brAddressParser = require('br-address-parser');
+const brAddressParser = require('@minutrade/br-address-parser');
 const completeAddress = 'Av. Brasil, 1245 - Bloco 2 Ap 203 - Centro - Belo Horizonte - MG';
 const parsedAddress = brAddressParser.parse(completeAddress);
 ```
