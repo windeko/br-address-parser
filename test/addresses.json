@@ -329,5 +329,16 @@
             "city": "ANAPOLIS",
             "state": "GO"
         }
+    },
+    {
+        "address": "LINHA 14-LOTE 174 GLEBA 01 - ZONA RURAL - ALVORADA DOESTE - RO",
+        "expected": {
+            "street": "LINHA 14",
+            "number": "",
+            "complement": "LOTE 174 GLEBA 01",
+            "neighborhood": "ZONA RURAL",
+            "city": "ALVORADA DOESTE",
+            "state": "RO"
+        }
     }
 ]

@@ -52,6 +52,8 @@ const parse = (completeAddress, defaultFields) => {
     const sanitizedAddress = sanitizeAddress(completeAddress);
     console.debug(sanitizedAddress);
     const patterns = [
+        // LINHA 99 - COMPLEMENT - NEIGHBORHOOD - CITY - DF
+        /(?<street>LINHA\s\d+)\s[-,]\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>\w{2})/i,
         // STREET - COMPLEMENT - NEIGHBORHOOD - CITY - DF
         /(?<street>.*)\s[-,]\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>DF)/i,
         // STREET - COMPLEMENT - NUMBER - NEIGHBORHOOD - CITY - GO
