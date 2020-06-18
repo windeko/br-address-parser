@@ -318,5 +318,16 @@
             "city": "FORTALEZA",
             "state": "CE"
         }
+    },
+    {
+        "address": "AV BRASIL-NR 220 APT 1003 BLOCO 4 - JARDIM DAS AMERICAS 2A ETAPA - ANAPOLIS - GO",
+        "expected": {
+            "street": "AV BRASIL",
+            "number": "220",
+            "complement": "APT 1003 BLOCO 4",
+            "neighborhood": "JARDIM DAS AMERICAS 2 A ETAPA",
+            "city": "ANAPOLIS",
+            "state": "GO"
+        }
     }
 ]

@@ -38,12 +38,24 @@ const formatAddress = (parsedAddress) => {
     }
 }
 
-const parse = (completeAddress) => {
+const applyDefault = (parsedAddress, defaultFields) => {
+    const emptyKeys = Object.keys(parsedAddress).filter((key) => parsedAddress[key].trim() === '');
+    emptyKeys.forEach((key) => {
+        if (defaultFields[key]) {
+            parsedAddress[key] = defaultFields[key];
+        }
+    });
+    return parsedAddress;
+};
+
+const parse = (completeAddress, defaultFields) => {
     const sanitizedAddress = sanitizeAddress(completeAddress);
-    console.log(sanitizedAddress);
+    console.debug(sanitizedAddress);
     const patterns = [
         // STREET - COMPLEMENT - NEIGHBORHOOD - CITY - DF
         /(?<street>.*)\s[-,]\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>DF)/i,
+        // STREET - COMPLEMENT - NUMBER - NEIGHBORHOOD - CITY - GO
+        /(?<street>.*(?<!\s))(\s[-,]\s|\s?,\s?)((((NR?|CASA|NUMERO)\s?)(?<number>\d+|S\/?N)))(\s[-/]\s|\s)(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>GO)/i,
         // STREET - COMPLEMENT - NEIGHBORHOOD - CITY - GO
         /(?<street>.*(?<!\s))\s-\s(?<complement>.*)\s[-,]\s(?<neighborhood>.*)\s[-,]\s(?<city>.*)\s[-,]\s(?<state>GO)/i,
         // BR-999 - 10 - NEIGHBORHOOD - CITY - ST
@@ -88,7 +100,7 @@ const parse = (completeAddress) => {
         if (blacklisted) {
             return null;
         }
-        return formatAddress({
+        const parsedAddress = formatAddress({
             street: result.groups.street,
             number: (result.groups.number === undefined) ? '' : result.groups.number,
             complement: (result.groups.complement === undefined) ? '' : result.groups.complement,
@@ -96,11 +108,16 @@ const parse = (completeAddress) => {
             city: result.groups.city,
             state: result.groups.state
         });
+        if (defaultFields) {
+            applyDefault(parsedAddress, defaultFields);
+        }
+        return parsedAddress;
     }
     return null;
 }
 
 module.exports = {
     sanitizeAddress,
-    parse
+    parse,
+    applyDefault
 };

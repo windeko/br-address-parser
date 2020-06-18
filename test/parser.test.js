@@ -25,6 +25,22 @@ suite('Parser', () => {
         const expected = 'RUA DA GROELANDIA , 1554 - BAIRRO';
         const actual = parser.sanitizeAddress(addressWithSpaces);
         assert.strictEqual(actual, expected);
+    });
+
+    test('Should apply default values when some fields are empty', () => {
+        const address = 'AV ANAVILLE 1-QD 3 LT 4 - RESIDENCIAL ANAVILLE - ANAPOLIS - GO';
+        const actual = parser.parse(address, {
+            number: 'S/N'
+        });
+        const expected = {
+            street: 'AV ANAVILLE 1',
+            number: 'S/N',
+            complement: 'QD 3 LT 4',
+            neighborhood: 'RESIDENCIAL ANAVILLE',
+            city: 'ANAPOLIS',
+            state: 'GO'
+        };
+        assert.deepEqual(actual, expected);
     })
 
     addresses
