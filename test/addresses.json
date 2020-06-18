@@ -340,5 +340,13 @@
             "city": "ALVORADA DOESTE",
             "state": "RO"
         }
+    },
+    {
+        "address": "ESTRADA GERAL DEMORAS-S/N -  - ALFREDO WAGNER - SC",
+        "expected": null
+    },
+    {
+        "address": "SITIO JK LOTE-SN -  - BOM JESUS DO ARAGUAIA - MT",
+        "expected": null
     }
 ]

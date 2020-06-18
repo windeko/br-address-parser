@@ -12,6 +12,9 @@ const blacklist = ({
     if (/^(RUA|R)$/i.test(street)) {
         return true;
     }
+    if (/^(S\/?N)$/i.test(neighborhood)){
+        return true;
+    }
     return /(apto|bloco|apartamento|casa|ap|bl\s\d+)\b/gi.test(street);
 };
 
