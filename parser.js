@@ -15,7 +15,7 @@ const blacklist = ({
     if (/^(S\/?N)$/i.test(neighborhood)){
         return true;
     }
-    return /(apto|bloco|apartamento|casa|ap|bl\s\d+)\b/gi.test(street);
+    return /(apto|bloco|apartamento\s\d+)\b/gi.test(street);
 };
 
 const sanitizeAddress = (completeAddress) => {
